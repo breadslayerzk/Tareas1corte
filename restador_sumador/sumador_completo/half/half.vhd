@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity half is 
+	port
+		(A : in std_logic;
+		 B : in std_logic;
+		 
+		 F : out std_logic;
+		 G : out std_logic);
+end entity;
+
+architecture arquitectura of half is
+begin
+	F <= A xor B after 1 ns;
+	G <= A AND B after 1 ns;
+	
+end architecture;
+

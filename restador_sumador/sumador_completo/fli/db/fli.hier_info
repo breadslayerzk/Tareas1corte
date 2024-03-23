@@ -1,0 +1,121 @@
+|fli
+A[0] => system:A1.A
+A[1] => system:A2.A
+A[2] => system:A3.A
+A[3] => system:A4.A
+B[0] => system:A1.B
+B[1] => system:A2.B
+B[2] => system:A3.B
+B[3] => system:A4.B
+C => system:A1.C
+F[0] <= system:A1.F
+F[1] <= system:A2.F
+F[2] <= system:A3.F
+F[3] <= system:A4.F
+G <= system:A4.G
+
+
+|fli|system:A1
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A1|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A1|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A2
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A2|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A2|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A3
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A3|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A3|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A4
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A4|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fli|system:A4|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+

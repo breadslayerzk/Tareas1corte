@@ -1,0 +1,254 @@
+|comple
+A[0] => fli:U1.A[0]
+A[1] => fli:U1.A[1]
+A[2] => fli:U1.A[2]
+A[3] => fli:U1.A[3]
+B[0] => fli:U1.B[0]
+B[1] => fli:U1.B[1]
+B[2] => fli:U1.B[2]
+B[3] => fli:U1.B[3]
+C => ~NO_FANOUT~
+F[0] << bcd:U4.ABCDEFG[0]
+F[1] << bcd:U4.ABCDEFG[1]
+F[2] << bcd:U4.ABCDEFG[2]
+F[3] << bcd:U4.ABCDEFG[3]
+F[4] << bcd:U4.ABCDEFG[4]
+F[5] << bcd:U4.ABCDEFG[5]
+F[6] << bcd:U4.ABCDEFG[6]
+G[0] << bcd:U3.ABCDEFG[0]
+G[1] << bcd:U3.ABCDEFG[1]
+G[2] << bcd:U3.ABCDEFG[2]
+G[3] << bcd:U3.ABCDEFG[3]
+G[4] << bcd:U3.ABCDEFG[4]
+G[5] << bcd:U3.ABCDEFG[5]
+G[6] << bcd:U3.ABCDEFG[6]
+
+
+|comple|fli:U1
+A[0] => system:A1.A
+A[1] => system:A2.A
+A[2] => system:A3.A
+A[3] => system:A4.A
+B[0] => system:A1.B
+B[1] => system:A2.B
+B[2] => system:A3.B
+B[3] => system:A4.B
+C => system:A1.C
+F[0] <= system:A1.F
+F[1] <= system:A2.F
+F[2] <= system:A3.F
+F[3] <= system:A4.F
+G <= system:A4.G
+
+
+|comple|fli:U1|system:A1
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A1|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A1|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A2
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A2|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A2|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A3
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A3|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A3|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A4
+A => half:HA1.A
+B => half:HA1.B
+C => half:HA2.B
+F <= half:HA2.F
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A4|half:HA1
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|fli:U1|system:A4|half:HA2
+A => F.IN0
+A => G.IN0
+B => F.IN1
+B => G.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|tabla:U2
+A => Mux0.IN8
+A => Mux1.IN16
+A => Mux2.IN16
+A => Mux3.IN16
+A => Mux4.IN16
+B => Mux0.IN9
+B => Mux1.IN17
+B => Mux2.IN17
+B => Mux3.IN17
+B => Mux4.IN17
+C => Mux0.IN10
+C => Mux1.IN18
+C => Mux2.IN18
+C => Mux3.IN18
+C => Mux4.IN18
+D => Mux1.IN19
+D => Mux2.IN19
+D => Mux3.IN19
+D => Mux4.IN19
+E => ABCDEFG[0].DATAIN
+ABCDEFG[0] <= E.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[3] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[4] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[5] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= <GND>
+ABCDEFG[7] <= <GND>
+
+
+|comple|bcd:U3
+IA => Mux0.IN16
+IA => Mux1.IN16
+IA => Mux2.IN16
+IA => Mux3.IN16
+IA => Mux4.IN16
+IA => Mux5.IN16
+IA => Mux6.IN16
+IB => Mux0.IN17
+IB => Mux1.IN17
+IB => Mux2.IN17
+IB => Mux3.IN17
+IB => Mux4.IN17
+IB => Mux5.IN17
+IB => Mux6.IN17
+IC => Mux0.IN18
+IC => Mux1.IN18
+IC => Mux2.IN18
+IC => Mux3.IN18
+IC => Mux4.IN18
+IC => Mux5.IN18
+IC => Mux6.IN18
+ID => Mux0.IN19
+ID => Mux1.IN19
+ID => Mux2.IN19
+ID => Mux3.IN19
+ID => Mux4.IN19
+ID => Mux5.IN19
+ID => Mux6.IN19
+ABCDEFG[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comple|bcd:U4
+IA => Mux0.IN16
+IA => Mux1.IN16
+IA => Mux2.IN16
+IA => Mux3.IN16
+IA => Mux4.IN16
+IA => Mux5.IN16
+IA => Mux6.IN16
+IB => Mux0.IN17
+IB => Mux1.IN17
+IB => Mux2.IN17
+IB => Mux3.IN17
+IB => Mux4.IN17
+IB => Mux5.IN17
+IB => Mux6.IN17
+IC => Mux0.IN18
+IC => Mux1.IN18
+IC => Mux2.IN18
+IC => Mux3.IN18
+IC => Mux4.IN18
+IC => Mux5.IN18
+IC => Mux6.IN18
+ID => Mux0.IN19
+ID => Mux1.IN19
+ID => Mux2.IN19
+ID => Mux3.IN19
+ID => Mux4.IN19
+ID => Mux5.IN19
+ID => Mux6.IN19
+ABCDEFG[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

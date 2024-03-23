@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Logicos\Downloads\complee\simulation\qsim
+vcomplee
+Z1 !s100 7mmBQ;ljoN2`T`iNUb^;V0
+Z2 IYdOIQ<beR1BSMV;GJ1]?03
+Z3 Vb=mAlz3_QeRQeOg8S;PXJ0
+Z4 dC:\Users\Usuario\OneDrive\Escritorio\quar\complee\complee\simulation\qsim
+Z5 w1709262368
+Z6 8complee.vo
+Z7 Fcomplee.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|complee.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1709262370.330000
+Z12 !s107 complee.vo|
+!s101 -O0
+vcomplee_vlg_check_tst
+!i10b 1
+!s100 2B^HSjJFWL6<chLQMXak01
+I8F9eNm=@>UYISTa0P`ZV00
+Z13 VFc]Gm_P1XlcB6G@2;K9e93
+R4
+Z14 w1709262367
+Z15 8Waveform.vwf.vt
+Z16 FWaveform.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z17 !s108 1709262370.417000
+Z18 !s107 Waveform.vwf.vt|
+Z19 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+vcomplee_vlg_sample_tst
+!i10b 1
+!s100 MToAOCWnFoCj1@UfJZK4:0
+Id^VG9l;3G[3XhAJ]n>hD73
+Z20 VOoa`bRIfT1_0c<26AGozP0
+R4
+R14
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10
+vcomplee_vlg_vec_tst
+!i10b 1
+!s100 lUn=:HALm@El;Je3U@eO>1
+IEUFi<2DH5?oJ6E?S:nZ`T1
+Z21 VfPZXQ;zB2YgI0K8HOf3aS1
+R4
+R14
+R15
+R16
+Z22 L0 424
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10

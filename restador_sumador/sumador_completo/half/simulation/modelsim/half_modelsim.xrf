@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Usuario/OneDrive/Escritorio/quar/quar/half/half.vhd
+source_file = 1, C:/Users/Usuario/OneDrive/Escritorio/quar/quar/half/db/half.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = half
+instance = comp, \F~output\, F~output, half, 1
+instance = comp, \G~output\, G~output, half, 1
+instance = comp, \A~input\, A~input, half, 1
+instance = comp, \B~input\, B~input, half, 1
+instance = comp, \F~0\, F~0, half, 1
+instance = comp, \G~0\, G~0, half, 1
